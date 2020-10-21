@@ -7,18 +7,25 @@
     <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
-    <h1>Vue</h1>
+    <h1>神社</h1>
     <div id="app">
-        {{test}}
+        {{message}}
     </div>
     <hr>
+    <button onclick="doAct();">
+        おみくじを引く
+    </button>
     <script>
+        var data ={
+            message: 'おみくじ'
+        }
         var app = new Vue({
             el: '#app',
-            data: {
-                test: 'HELLO VUEEEEEEEEEEEEEEEEEEEEEEEEEEEee'
-            }
+            data: data
         })
+    function doAct(){
+        data.message = '大吉';
+    }
     </script>
 </body>
 </html>
